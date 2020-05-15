@@ -43,6 +43,7 @@
 
 .list-group-item {
   padding: 4px;
+  margin: 4px 0px;
 }
 
 .card-trip {
@@ -51,11 +52,16 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 600px;
   margin: 16px auto;
+  border-radius: 0px 0px 4px 4px;
+  .btn {
+    margin: 8px;
+  }
 }
 
 .card-trip > img {
   height: 200px;
   width: 100%;
+  border-radius: 4px 4px 0px 0px;
   object-fit: cover;
 }
 
@@ -71,9 +77,8 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 14px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
