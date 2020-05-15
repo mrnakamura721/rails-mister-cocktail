@@ -1,0 +1,16 @@
+.cocktail-form {
+  width: 600px;
+  margin: 16px auto;
+}
+
+.form-actions {
+  width: 150px;
+  color: rgb(220, 220, 220);
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 4px;
+  &:hover {
+    color: rgb(180, 180, 180);
+    border: 1px solid rgb(180, 180, 180);
+
+  }
+}
