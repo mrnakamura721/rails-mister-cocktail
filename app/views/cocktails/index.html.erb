@@ -1,18 +1,23 @@
-
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?cs=srgb&dl=assorted-wine-bottles-1283219.jpg&fm=jpg);">
   <div class="container">
     <h1>Welcome to Momo's bar!</h1>
-    <p>Famous for having regular customers like Bill Cosby.</p>
+    <p>Famous regular customers like Bill Cosby.</p>
     <%= link_to "Add cocktail", new_cocktail_path, class: "btn btn-success"  %>
   </div>
 </div>
 
 <div class="cocktails">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?cs=srgb&dl=alcoholic-bar-beverage-blur-338713.jpg&fm=jpg)">
-      <%= cocktail.name %>
-      <%= link_to "", cocktail_path(cocktail), class:"card-remove-link" %>
-    </div>
+    <% if cocktail.photo.attached? %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 100, width: 100, crop: :fill %>')">
+        <%= cocktail.name %>
+        <%= link_to "", cocktail_path(cocktail), class:"card-remove-link" %>
+      </div>
+    <% else %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?cs=srgb&dl=alcoholic-bar-beverage-blur-338713.jpg&fm=jpg)">
+        <%= cocktail.name %>
+        <%= link_to "", cocktail_path(cocktail), class:"card-remove-link" %>
+      </div>
+    <% end %>
   <% end %>
 </div>
