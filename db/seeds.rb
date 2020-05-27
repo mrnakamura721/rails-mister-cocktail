@@ -28,5 +28,14 @@ puts "Creating cocktails..."
 Cocktail.create!(name: "Bloody Mary")
 Cocktail.create!(name: "Vodka Soda")
 Cocktail.create!(name: "Moscow Mule")
+Cocktail.create!(name: "Gin and Tonic")
+Cocktail.create!(name: "Whisky Sour")
+Cocktail.create!(name: "Tequila Sunrise")
+Cocktail.create!(name: "Sake Bomb")
+Cocktail.create!(name: "Old Fashion")
+Cocktail.create!(name: "White Russian")
+Cocktail.create!(name: "Margarita")
+Cocktail.create!(name: "Pina Colada")
+Cocktail.create!(name: "Rum and Coke")
 puts "Completed adding cocktails"
 
